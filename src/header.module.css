@@ -1,0 +1,155 @@
+/* Header Container */
+.headerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 32px;
+  background-color: #20252d;
+  color: white;
+  width: 100vw;
+  min-height: 85px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.logoDiv {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logoDiv:hover {
+  color: #5effff;
+}
+
+/* Navbar */
+.navbarDiv {
+  display: flex;
+}
+
+.headerUl {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.headerA,
+.headerA:visited {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), color 0.25s;
+}
+
+.headerA:hover {
+  color: #00FFFF;
+  transform: translateY(-6px) scale(1.08);
+}
+
+/* Hamburger Button */
+.hamburgerBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  height: 38px;
+  width: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1060;
+  gap: 4px;
+  padding: 0;
+}
+
+.hamburgerBtn span {
+  display: block;
+  height: 3px;
+  width: 28px;
+  background: #00ffff;
+  border-radius: 12px;
+  transition: all 0.4s;
+}
+
+/* Sidebar styles */
+.navSidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #23292f;
+  height: 100vh;
+  width: 250px;
+  z-index: 1050;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+  padding-top: 85px;
+}
+
+.navSidebar .headerUl {
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  margin: 0;
+  padding-left: 28px;
+}
+
+.navSidebar .headerUl > li {
+  padding-bottom: 30px;
+}
+
+/* Overlay */
+.overlayDiv {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.36);
+  z-index: 1040;
+}
+
+/* Responsive / breakpoints */
+@media (max-width: 900px) {
+  .headerDiv {
+    padding: 12px 15px;
+  }
+  .logoDiv {
+    font-size: 1.7rem;
+  }
+  .headerUl {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .headerDiv {
+    padding: 8px 10px;
+  }
+  .logoDiv {
+    font-size: 1.3rem;
+  }
+  .navbarDiv {
+    display: none;
+  }
+  .hamburgerBtn {
+    display: flex;
+  }
+}
+
+/* Hide sidebar nav on bigger screens */
+@media (min-width: 701px) {
+  .navSidebar, .overlayDiv {
+    display: none !important;
+  }
+}

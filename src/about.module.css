@@ -1,0 +1,125 @@
+/* about.module.css */
+
+.container {
+  width: 100vw; /* Take full viewport width */
+  padding: 20px 32px; /* Add horizontal padding */
+  background-color: #20252d;
+  box-sizing: border-box;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #00ffff;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color: #ddd;
+  text-align: justify;
+}
+
+.highlight {
+  color: #00ffff;
+  font-weight: 600;
+}
+
+/* Make certificates scrollable and enlarge */
+.certificates {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px 0;
+  gap: 28px;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff transparent;
+}
+
+.certificates::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certificates::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 4px;
+}
+
+.certificates::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.certificateCard {
+  flex: 0 0 auto;
+  width: 180px; /* increased from 150px */
+  background-color: #262a32;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 255, 255, 0.2);
+  transition: transform 0.2s;
+}
+
+.certificateCard:hover {
+  transform: translateY(-4px);
+}
+
+.certificateImage {
+  width: 100px; /* increased from 80px */
+  height: 100px; /* increased from 80px */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.certName {
+  font-size: 1.1rem; /* larger font size */
+  color: #ddd;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px 24px;
+    width: 100vw;
+  }
+  .certificateCard {
+    width: 150px;
+    padding: 14px;
+  }
+  .certificateImage {
+    width: 90px;
+    height: 90px;
+  }
+  .heading {
+    font-size: 2.2rem;
+  }
+  .certName {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px 16px;
+    width: 100vw;
+  }
+  .certificateCard {
+    width: 130px;
+    padding: 12px;
+  }
+  .certificateImage {
+    width: 75px;
+    height: 75px;
+  }
+  .heading {
+    font-size: 1.8rem;
+  }
+  .certName {
+    font-size: 0.9rem;
+  }
+}
