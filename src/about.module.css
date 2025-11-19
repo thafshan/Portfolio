@@ -1,87 +1,109 @@
-/* about.module.css */
-
+/* Container holds entire about section, full viewport width with padding */
 .container {
   width: 100vw; /* Take full viewport width */
   padding: 20px 32px; /* Add horizontal padding */
-  background-color: #20252d;
-  box-sizing: border-box;
+  background-color: #20252d; /* Dark background */
+  box-sizing: border-box; /* Include padding in width */
 }
 
+/* Heading style */
 .heading {
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: #00ffff;
+  text-align: center; /* Center heading text */
+  font-size: 2.8rem; /* Large font size */
+  font-weight: 700; /* Bold text */
+  margin-bottom: 24px; /* Space below heading */
+  color: #00ffff; /* Cyan color */
 }
 
+/* Paragraph styling */
 .paragraph {
-  font-size: 1.2rem;
-  line-height: 1.75;
-  color: #ddd;
-  text-align: justify;
+  font-size: 1.2rem; /* Comfortable readable size */
+  line-height: 1.75; /* Line spacing for readability */
+  color: #ddd; /* Light gray color */
+  text-align: justify; /* Justify paragraph text */
 }
 
+/* Highlight important text in cyan */
 .highlight {
   color: #00ffff;
   font-weight: 600;
 }
 
-/* Make certificates scrollable and enlarge */
-.certificates {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 20px 0;
-  gap: 28px;
-  scrollbar-width: thin;
-  scrollbar-color: #00ffff transparent;
+/* Wrapper to enable horizontal scrolling */
+.certificatesScrollWrapper {
+  width: 100%; /* Full width of container */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
+/* Certificates container flexbox, shrink-wraps content by default */
+.certificates {
+  display: inline-flex; /* Shrink-wrap cards width, keep horizontal */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 28px; /* Horizontal gap between cards */
+  padding: 20px 0; /* Vertical padding */
+  scrollbar-width: thin; /* Thin scrollbar Firefox */
+  scrollbar-color: #00ffff transparent; /* Cyan scrollbar */
+  scroll-padding-left: 16px; /* Left padding so first card fully visible */
+}
+
+/* Webkit scrollbar styles */
 .certificates::-webkit-scrollbar {
-  height: 8px;
+  height: 8px; /* Scrollbar height */
 }
 
 .certificates::-webkit-scrollbar-thumb {
-  background-color: #00ffff;
-  border-radius: 4px;
+  background-color: #00ffff; /* Cyan scrollbar thumb */
+  border-radius: 4px; /* Rounded edges */
 }
 
 .certificates::-webkit-scrollbar-track {
-  background: transparent;
+  background: transparent; /* Transparent track */
 }
 
+/* Certificate card */
 .certificateCard {
-  flex: 0 0 auto;
-  width: 180px; /* increased from 150px */
-  background-color: #262a32;
-  border-radius: 12px;
-  padding: 16px;
-  text-align: center;
-  box-shadow: 0 2px 12px rgba(0, 255, 255, 0.2);
-  transition: transform 0.2s;
+  flex: 0 0 auto; /* Do not shrink or grow */
+  width: 180px; /* Card width */
+  background-color: #262a32; /* Card bg color */
+  border-radius: 12px; /* Rounded corners */
+  padding: 16px; /* Inner padding */
+  text-align: center; /* Center content */
+  box-shadow: 0 2px 12px rgba(0, 255, 255, 0.2); /* Cyan shadow */
+  transition: transform 0.2s; /* Smooth hover */
 }
 
 .certificateCard:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px); /* Slight lift on hover */
 }
 
 .certificateImage {
-  width: 100px; /* increased from 80px */
-  height: 100px; /* increased from 80px */
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  width: 100px; /* Image width */
+  height: 100px; /* Image height */
+  object-fit: cover; /* Cover image */
+  border-radius: 8px; /* Rounded edges */
+  margin-bottom: 12px; /* Space below image */
 }
 
 .certName {
-  font-size: 1.1rem; /* larger font size */
-  color: #ddd;
-  margin: 0;
-  font-weight: 600;
+  font-size: 1.1rem; /* Font size */
+  color: #ddd; /* Text color */
+  margin: 0; /* Remove margin */
+  font-weight: 600; /* Semi-bold */
 }
 
-/* Responsive */
+/* Center certificates container on larger screens */
+@media (min-width: 900px) {
+  .certificates {
+    display: flex; /* Regular flex container */
+    justify-content: center; /* Center cards horizontally */
+    width: 100%; /* Take full width */
+    max-width: 1200px; /* Limit max width for centering */
+    margin: 0 auto; /* Center container */
+  }
+}
+
+/* Responsive for tablets */
 @media (max-width: 768px) {
   .container {
     padding: 16px 24px;
@@ -103,6 +125,7 @@
   }
 }
 
+/* Responsive for small phones */
 @media (max-width: 480px) {
   .container {
     padding: 12px 16px;

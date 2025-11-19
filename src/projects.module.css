@@ -37,16 +37,21 @@
   width: 100%; /* Take full width for centered text */
 }
 
-.cardsRow {
-  display: flex;
-  gap: 32px;
+.cardsScrollWrapper {
+  width: 100%;
   overflow-x: auto;
-  padding-top: 15px;
-  padding-bottom: 12px;
-  scrollbar-width: thin;
-  scrollbar-color: #00ffff #23292f;
+  -webkit-overflow-scrolling: touch; /* smoother scrolling on iOS */
 }
 
+.cardsRow {
+  display: inline-flex; /* Shrink-wrap cards width */
+  gap: 32px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  max-width: none;
+}
+
+/* Scrollbar styling */
 .cardsRow::-webkit-scrollbar {
   height: 6px;
   background: #23292f;
@@ -59,6 +64,7 @@
   background: #23292f;
 }
 
+/* Project card styling */
 .projectCard {
   min-width: 260px;
   max-width: 295px;
@@ -122,7 +128,18 @@
   color: #262a32;
 }
 
-/* Responsive adjustments */
+/* Center cards and constrain width on large screens */
+@media (min-width: 900px) {
+  .cardsRow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Responsive adjustments for medium and small screens */
 @media (max-width: 900px) {
   .projectCard {
     min-width: 75vw;
@@ -141,6 +158,7 @@
   }
   .cardsRow {
     gap: 16px;
+    /* No centering on smaller screens to allow scroll from left */
   }
 }
 

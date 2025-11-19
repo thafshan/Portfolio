@@ -29,7 +29,8 @@ const About = () => {
       </p>
 
       <h1 className={styles.heading}>Certificates</h1>
-      <div className={styles.certificates}>
+      <div className={styles.certificatesScrollWrapper}>
+              <div className={styles.certificates}>
         {certificatesArray.map((cert, index) => (
           <div key={index} className={styles.certificateCard}>
             {cert.image && (
@@ -39,6 +40,8 @@ const About = () => {
           </div>
         ))}
       </div>
+      </div>
+
     </div>
   );
 };

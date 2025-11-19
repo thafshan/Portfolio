@@ -75,38 +75,43 @@ const HTMLProjectsArray = [
   }
 ];
 
-  return (
-    <div id='projects' className={styles.projectsSection}>
-      <div className={styles.projectCategory}>
-        <div className={styles.categoryHeader}>
-          <img src="/images/react.jpeg" alt="ReactJS Projects" />
-          <h1>ReactJS Projects</h1>
-        </div>
+return (
+  <div id='projects' className={styles.projectsSection}>
+    <div className={styles.projectCategory}>
+      <div className={styles.categoryHeader}>
+        <img src="/images/react.jpeg" alt="ReactJS Projects" />
+        <h1>ReactJS Projects</h1>
+      </div>
+      <div className={styles.cardsScrollWrapper}>
         <div className={styles.cardsRow}>
           {reactProjectsArray.map((proj, idx) => (
             <ProjectCard key={idx} {...proj} />
           ))}
         </div>
       </div>
+    </div>
 
-      <div className={styles.projectCategory}>
-        <div className={styles.categoryHeader}>
-          <img src="/images/JS.png" alt="JavaScript" />
-          <h1>JavaScript Mini-Games</h1>
-        </div>
+    <div className={styles.projectCategory}>
+      <div className={styles.categoryHeader}>
+        <img src="/images/JS.png" alt="JavaScript" />
+        <h1>JavaScript Mini-Games</h1>
+      </div>
+      <div className={styles.cardsScrollWrapper}>
         <div className={styles.cardsRow}>
           {JSProjectsArray.map((proj, idx) => (
             <ProjectCard key={idx} {...proj} />
           ))}
         </div>
       </div>
+    </div>
 
-      <div className={styles.projectCategory}>
-        <div className={styles.categoryHeader}>
-          <img src="/images/HTML.png" alt="HTML Projects" />
-          <img src="/images/CSS.jpeg" alt="CSS Projects" />
-          <h1>HTML and CSS Starting Projects</h1>
-        </div>
+    <div className={styles.projectCategory}>
+      <div className={styles.categoryHeader}>
+        <img src="/images/HTML.png" alt="HTML Projects" />
+        <img src="/images/CSS.jpeg" alt="CSS Projects" />
+        <h1>HTML and CSS Starting Projects</h1>
+      </div>
+      <div className={styles.cardsScrollWrapper}>
         <div className={styles.cardsRow}>
           {HTMLProjectsArray.map((proj, idx) => (
             <ProjectCard key={idx} {...proj} />
@@ -114,7 +119,8 @@ const HTMLProjectsArray = [
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 };
 
 export default Projects;
