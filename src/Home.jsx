@@ -15,17 +15,17 @@ const Home = () => {
           </h1>
           <ul className={styles.socialList}>
             <li>
-              <a className={styles.homeIcon} href="#">
+              <a className={styles.homeIcon} href="https://www.linkedin.com/in/iamafshaaan/">
                 <Linkedin />
               </a>
             </li>
             <li>
-              <a className={styles.homeIcon} href="#">
+              <a className={styles.homeIcon} href="https://www.instagram.com/iamafshx_xn/">
                 <Instagram />
               </a>
             </li>
             <li>
-              <a className={styles.homeIcon} href="#">
+              <a className={styles.homeIcon} href="https://github.com/thafshan">
                 <Github />
               </a>
             </li>
