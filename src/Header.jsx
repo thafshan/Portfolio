@@ -16,7 +16,7 @@ const Header = () => {
             <li><a className={styles.headerA} href="#projects">Projects</a></li>
             <li><a className={styles.headerA} href="#about">About</a></li>
             <li><a className={styles.headerA} href="#contact">Contact Me</a></li>
-            <li><a className={styles.headerA} href="#">Resume</a></li>
+            <li><a className={styles.headerA} href="/Afshan Thayab Resume -FrontEndDev.pdf">Resume</a></li>
           </ul>
         </nav>
 
