@@ -21,6 +21,12 @@ const Projects = () => {
   // Your arrays...
   const reactProjectsArray = [
   {
+    image: '/images/Fetch.png',
+    name: 'Fetch API ',
+    description: 'I built a responsive Products App using React JS and Fetch API JS Function',
+    liveLink: 'https://assisment-5.netlify.app/'
+  },
+    {
     image: '/images/notes-app.png',
     name: 'Notes App Project',
     description: 'I built a responsive Notes App using React JS and Tailwind CSS',
