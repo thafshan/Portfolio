@@ -21,6 +21,12 @@ const Projects = () => {
   // Your arrays...
   const reactProjectsArray = [
   {
+    image: '/images/gta.png',
+    name: 'Gta VI Landing Page',
+    description: 'I built a Responsive and a lil Creative website',
+    liveLink: 'https://gtavithafshan.netlify.app/'
+  },
+  {
     image: '/images/Fetch.png',
     name: 'Fetch API ',
     description: 'I built a responsive Products App using React JS and Fetch API JS Function',
